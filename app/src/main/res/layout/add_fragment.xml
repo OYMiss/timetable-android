@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.add.AddFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/daySpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/courseEndBlockEditText"
+                app:layout_constraintStart_toEndOf="@+id/courseEndBlockEditText"
+                app:layout_constraintTop_toTopOf="@+id/courseEndBlockEditText" />
+
+            <Button
+                android:id="@+id/addCourseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="添加"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/weeksTextView" />
+
+            <TextView
+                android:id="@+id/courseTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="上课时间"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseLocationTextView" />
+
+            <TextView
+                android:id="@+id/courseNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="课程名称"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/courseLocationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="上课教室"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseNameTextView" />
+
+            <TextView
+                android:id="@+id/weeksTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:text="上课周数"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/courseTimeTextView" />
+
+            <EditText
+                android:id="@+id/courseNameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/courseNameTextView"
+                app:layout_constraintStart_toEndOf="@+id/courseNameTextView" />
+
+            <EditText
+                android:id="@+id/courseLocationEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/courseLocationTextView"
+                app:layout_constraintStart_toEndOf="@+id/courseLocationTextView" />
+
+            <EditText
+                android:id="@+id/courseBeginBlockEditText"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="eg: 1"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/courseTimeTextView"
+                app:layout_constraintStart_toEndOf="@+id/courseTimeTextView" />
+
+            <EditText
+                android:id="@+id/courseEndBlockEditText"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/courseBlockDividerTextView"
+                app:layout_constraintStart_toEndOf="@+id/courseBlockDividerTextView" />
+
+            <EditText
+                android:id="@+id/courseWeeksEditText"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="eg: 1-13,15"
+                android:inputType="textPersonName"
+                app:layout_constraintBaseline_toBaselineOf="@+id/weeksTextView"
+                app:layout_constraintStart_toEndOf="@+id/weeksTextView" />
+
+            <TextView
+                android:id="@+id/courseBlockDividerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="～"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/courseBeginBlockEditText"
+                app:layout_constraintStart_toEndOf="@+id/courseBeginBlockEditText" />
+
+            <Button
+                android:id="@+id/cancleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="返回"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/addCourseButton"
+                app:layout_constraintStart_toEndOf="@+id/addCourseButton" />
+
+            <Spinner
+                android:id="@+id/weekSpinner"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/courseWeeksEditText"
+                app:layout_constraintStart_toEndOf="@+id/courseWeeksEditText"
+                app:layout_constraintTop_toTopOf="@+id/courseWeeksEditText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

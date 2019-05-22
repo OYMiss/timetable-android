@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="course"
+            type="edu.cczu.table.model.Course" />
+        <variable
+            name="day"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/courseItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/courseName"
+            android:text="@{course != null ? course.name : day, default=Hello}"
+            android:gravity="center"
+            android:maxLines="4"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="6dp"
+            android:id="@+id/status"
+            android:gravity="center"
+            android:text="@{course.location, default=w1203}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</layout>
